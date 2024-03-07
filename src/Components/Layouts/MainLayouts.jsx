@@ -1,8 +1,10 @@
 import { Outlet } from "react-router-dom";
+import Navbar from "../Pages/SharedPages/NavBar/Navbar";
 
 const MainLayouts=()=>{
     return(
         <div>
+            <Navbar />
              <Outlet />
         </div>
     )}
