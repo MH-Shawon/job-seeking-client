@@ -1,13 +1,13 @@
-.authPage {
+/* .authPage {
   display: flex;
   min-width: 1500px;
   max-width: 1500px;
   margin: 0 auto;
-  min-height: 100vh;
+  min-height: 90vh;
 }
 .authPage .container {
-  flex: 1;
-  display: flex;
+  
+  
   flex-direction: column;
   justify-content: center;
   background: #fff;
@@ -119,4 +119,4 @@
     flex: none;
     display: none;
   }
-}
+} */

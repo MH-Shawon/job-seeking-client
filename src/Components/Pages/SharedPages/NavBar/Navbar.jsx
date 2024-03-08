@@ -6,7 +6,13 @@ import { AuthContext } from "../../../Providers/Auth/AuthProvider";
 const Navbar = () => {
   const { user, logOut } = useContext(AuthContext);
   const handleSignOut = () => {
-    logOut().then().catch();
+    logOut()
+    .then(result=>{
+console.log(result)
+    }).
+    catch(error=>{
+      console.log(error)
+    });
   };
   const navlinks = (
     <>
@@ -15,23 +21,20 @@ const Navbar = () => {
           <NavLink to="/">Home</NavLink>
         </li>
         <li>
-          <NavLink to="/products">Products</NavLink>
-        </li>
-        <li>
-          <NavLink to="/shop">Shop</NavLink>
-        </li>
-        <li>
-          <NavLink to="/ourstory">Our Story</NavLink>
+          <NavLink to="/alljobs">All Jobs</NavLink>
         </li>
 
         <>
           {user?.email && (
             <>
               <li>
-                <NavLink to="/productsDetails">Details</NavLink>
+                <NavLink to="/applied">applied Jobs</NavLink>
               </li>
               <li>
-                <NavLink to="/myCart">My Cart</NavLink>
+                <NavLink to="/addjobs">Add A Job</NavLink>
+              </li>
+              <li>
+                <NavLink to="/myjobs">My Jobs</NavLink>
               </li>
             </>
           )}
@@ -67,9 +70,10 @@ const Navbar = () => {
           </ul>
         </div>
 
-        <Link to="/" className="w-[145px] h-[45px] my-auto ">
+        <Link to="/" className="w-[105px] h-[45px] my-auto flex">
           <img className=" w-full h-full rounded" src={logo} alt="" />
-          
+          <h4 className="mx-auto my-auto font-black text-4xl">JOB </h4>
+          <p className="font-normal text-sm mt-5 ml-0.5">Seek...</p>
         </Link>
       </div>
       <div className="navbar-center hidden lg:flex">
@@ -77,7 +81,7 @@ const Navbar = () => {
       </div>
       <div className="navbar-end">
         <div>
-          {user ? (
+          {user?.email ? (
             <div className="dropdown dropdown-end">
               <div
                 tabIndex={0}
@@ -87,7 +91,7 @@ const Navbar = () => {
                 <div className="w-10 rounded-full">
                   <img
                     alt="Tailwind CSS Navbar component"
-                    src={user.photoURL}
+                    src={user?.photoURL}
                   />
                 </div>
               </div>
