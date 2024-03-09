@@ -1,0 +1,67 @@
+[
+  {
+    "company": "Acme Inc.",
+    "jobTitle": "Software Engineer",
+    "category": "On-Site",
+    "postedDate": "2024-03-08",
+    "applicationDeadline": "2024-03-22",
+    "salaryRange": {
+      "min": 80000,
+      "max": 100000
+    },
+    "applicants": 25,
+    "viewDetails": "See job description, requirements, and apply now!"
+  },
+  {
+    "company": "Design Inc.",
+    "jobTitle": "Graphic Designer",
+    "category": "On-Site",
+    "postedDate": "2024-02-20",
+    "applicationDeadline": "2024-03-20",
+    "salaryRange": {
+      "min": 50000,
+      "max": 65000
+    },
+    "applicants": 85,
+    "viewDetails": "Learn more about this creative role and apply today!"
+  },
+  {
+    "company": "Law Firm Jones",
+    "jobTitle": "Paralegal",
+    "category": "On-Site",
+    "postedDate": "2024-03-02",
+    "applicationDeadline": "2024-03-25",
+    "salaryRange": {
+      "min": 40000,
+      "max": 50000
+    },
+    "applicants": 17,
+    "viewDetails": "Discover your legal career path and apply!"
+  },
+  {
+    "company": "Manufacturing Inc.",
+    "jobTitle": "Production Engineer",
+    "category": "On-Site",
+    "postedDate": "2024-02-27",
+    "applicationDeadline": "2024-03-15",
+    "salaryRange": {
+      "min": 65000,
+      "max": 80000
+    },
+    "applicants": 38,
+    "viewDetails": "Full details and application for Production Engineer position."
+  },
+  {
+    "company": "Retail Giant",
+    "jobTitle": "Store Manager",
+    "category": "On-Site",
+    "postedDate": "2024-03-04",
+    "applicationDeadline": "2024-03-12",
+    "salaryRange": {
+      "min": 50000,
+      "max": 60000
+    },
+    "applicants": 62,
+    "viewDetails": "Lead your team! See Store Manager details and apply."
+  }
+]

@@ -1,0 +1,84 @@
+[
+  {
+    "company": "Coffee Corner",
+    "jobTitle": "Barista",
+    "category": "Part-Time",
+    "postedDate": "2024-03-07",
+    "applicationDeadline": "2024-03-10",
+    "salaryRange": {
+      "min": 15,
+      "max": 18,
+      "unit": "per hour"
+    },
+    "applicants": 11,
+    "viewDetails": "Flexible hours! Apply for Barista (Part-Time) at Coffee Corner."
+  },
+  {
+    "company": "Bookstore Inc.",
+    "jobTitle": "Sales Associate",
+    "category": "Part-Time",
+    "postedDate": "2024-02-29",
+    "applicationDeadline": "2024-03-31",
+    "salaryRange": {
+      "min": 12,
+      "max": 15,
+      "unit": "per hour"
+    },
+    "applicants": 24,
+    "viewDetails": "Part-Time opportunity! Sell books and join the Bookstore team."
+  },
+  {
+    "company": "Fitness Center",
+    "jobTitle": "Gym Instructor (Evening)",
+    "category": "Part-Time",
+    "postedDate": "2024-03-06",
+    "applicationDeadline": "2024-03-18",
+    "salaryRange": {
+      "min": 20,
+      "max": 25,
+      "unit": "per hour"
+    },
+    "applicants": 12,
+    "viewDetails": "Shape up your schedule! Apply for Gym Instructor (Evening - Part-Time)."
+  },
+  {
+    "company": "StartUp X",
+    "jobTitle": "Software Developer",
+    "category": "Remote",
+    "postedDate": "2024-03-06",
+    "applicationDeadline": "2024-03-18",
+    "salaryRange": {
+      "min": 90000,
+      "max": 120000
+    },
+    "applicants": 5,
+    "viewDetails": "Work from anywhere! See details and apply for Software Developer (Remote)."
+  },
+  {
+    "company": "Educational Platform",
+    "jobTitle": "Online Curriculum Developer",
+    "category": "Remote",
+    "postedDate": "2024-03-02",
+    "applicationDeadline": "2024-03-20",
+    "salaryRange": {
+      "min": 60000,
+      "max": 72000
+    },
+    "applicants": 92,
+    "viewDetails": "Develop online courses remotely! Apply now for Online Curriculum Developer."
+  },
+  {
+    "company": "Translation Services",
+    "jobTitle": "Translator (Spanish)",
+    "category": "Remote",
+    "postedDate": "2024-03-09",
+    "applicationDeadline": "2024-04-05",
+    "salaryRange": {
+      "min": 35,
+      "max": 45,
+      "unit": "per hour"
+    },
+    "applicants": 18,
+    "viewDetails": "Translate from English to Spanish remotely! Apply today."
+  }
+]

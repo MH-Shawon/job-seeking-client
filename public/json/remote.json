@@ -1,0 +1,67 @@
+[
+  {
+    "company": "Global Solutions",
+    "jobTitle": "Content Writer",
+    "category": "Remote",
+    "postedDate": "2024-03-11",
+    "applicationDeadline": "2024-03-25",
+    "salaryRange": {
+      "min": 48000,
+      "max": 58000
+    },
+    "applicants": 32,
+    "viewDetails": "Craft compelling content! View details and apply for Content Writer (Remote)."
+  },
+  {
+    "company": "FinTech Solutions",
+    "jobTitle": "Data Analyst",
+    "category": "Remote",
+    "postedDate": "2024-03-10",
+    "applicationDeadline": "2024-04-10",
+    "salaryRange": {
+      "min": 65000,
+      "max": 80000
+    },
+    "applicants": 17,
+    "viewDetails": "Analyze data remotely! Learn more and apply for Data Analyst (Remote)."
+  },
+  {
+    "company": "E-commerce Giant",
+    "jobTitle": "Customer Service Representative",
+    "category": "Remote",
+    "postedDate": "2024-03-12",
+    "applicationDeadline": "2024-03-22",
+    "salaryRange": {
+      "min": 38000,
+      "max": 45000
+    },
+    "applicants": 54,
+    "viewDetails": "Provide excellent customer service remotely! Apply now for CSR (Remote)."
+  },
+  {
+    "company": "Tech Startup",
+    "jobTitle": "Software Engineer",
+    "category": "Remote",
+    "postedDate": "2024-03-11",
+    "applicationDeadline": "2024-03-20",
+    "salaryRange": {
+      "min": 100000,
+      "max": 130000
+    },
+    "applicants": 8,
+    "viewDetails": "Work from anywhere! See details and apply for Software Engineer (Remote)."
+  },
+  {
+    "company": "Healthcare Provider",
+    "jobTitle": "Registered Nurse (Telehealth)",
+    "category": "Remote",
+    "postedDate": "2024-03-13",
+    "applicationDeadline": "2024-04-05",
+    "salaryRange": {
+      "min": 75000,
+      "max": 90000
+    },
+    "applicants": 21,
+    "viewDetails": "Make a difference in healthcare remotely! Apply for Telehealth Nurse (Remote)."
+  }
+]

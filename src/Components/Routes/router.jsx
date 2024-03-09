@@ -5,6 +5,7 @@ import Home from "../Pages/Home/Home";
 import Login from "../Pages/Login/Login";
 import Register from "../Pages/Register/Register";
 import NotFound from "../NotFount/NotFound";
+import AllJobs from "../Layouts/JobsSection/AllJobs/AllJobs";
 
 
 const router = createBrowserRouter([
@@ -17,7 +18,11 @@ const router = createBrowserRouter([
         path: "/",
         element: <Home />,
       },
-      
+      {
+        path:'/alljobs',
+        element:<AllJobs />,
+        loader: () => fetch(`/json/allJobs.json`)
+      }
       
       
     ],

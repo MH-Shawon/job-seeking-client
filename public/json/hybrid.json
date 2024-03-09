@@ -1,0 +1,67 @@
+[
+  {
+    "company": "Green Tech",
+    "jobTitle": "Marketing Manager",
+    "category": "Hybrid",
+    "postedDate": "2024-02-28",
+    "applicationDeadline": "Ongoing",
+    "salaryRange": {
+      "min": 70000,
+      "max": 85000
+    },
+    "applicants": 42,
+    "viewDetails": "Work-life balance! Explore the Hybrid Marketing Manager role."
+  },
+  {
+    "company": "Health & Wellness Co.",
+    "jobTitle": "Customer Service Representative",
+    "category": "Hybrid",
+    "postedDate": "2024-02-15",
+    "applicationDeadline": "2024-04-15",
+    "salaryRange": {
+      "min": 35000,
+      "max": 45000
+    },
+    "applicants": 12,
+    "viewDetails": "Hybrid CSR opportunity! Learn more and apply today."
+  },
+  {
+    "company": "Education Institute",
+    "jobTitle": "Teacher",
+    "category": "Hybrid",
+    "postedDate": "2024-03-07",
+    "applicationDeadline": "2024-03-20",
+    "salaryRange": {
+      "min": 45000,
+      "max": 55000
+    },
+    "applicants": 65,
+    "viewDetails": "Make a difference! See details for Hybrid Teacher position."
+  },
+  {
+    "company": "Marketing Agency",
+    "jobTitle": "Social Media Manager",
+    "category": "Hybrid",
+    "postedDate": "2024-02-23",
+    "applicationDeadline": "2024-03-10",
+    "salaryRange": {
+      "min": 55000,
+      "max": 70000
+    },
+    "applicants": 31,
+    "viewDetails": "Hybrid role! Manage social media for Marketing Agency."
+  },
+  {
+    "company": "Consulting Firm",
+    "jobTitle": "Business Analyst",
+    "category": "Hybrid",
+    "postedDate": "2024-03-01",
+    "applicationDeadline": "2024-03-29",
+    "salaryRange": {
+      "min": 60000,
+      "max": 80000
+    },
+    "applicants": 48,
+    "viewDetails": "Hybrid Business Analyst opportunity! Apply today."
+  }
+]

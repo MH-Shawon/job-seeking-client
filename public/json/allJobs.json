@@ -1,0 +1,300 @@
+[
+  {
+    "name": "John Doe",
+    "company": "Coffee Corner",
+    "jobTitle": "Barista",
+    "category": "Part-Time",
+    "postedDate": "2024-03-07",
+    "applicationDeadline": "2024-03-10",
+    "salaryRange": {
+      "min": 15,
+      "max": 18,
+      "unit": "per hour"
+    },
+    "applicants": 11,
+    "viewDetails": "Flexible hours! Apply for Barista (Part-Time) at Coffee Corner."
+  },
+  {
+    "name": "Alice Johnson",
+    "company": "Bookstore Inc.",
+    "jobTitle": "Sales Associate",
+    "category": "Part-Time",
+    "postedDate": "2024-02-29",
+    "applicationDeadline": "2024-03-31",
+    "salaryRange": {
+      "min": 12,
+      "max": 15,
+      "unit": "per hour"
+    },
+    "applicants": 24,
+    "viewDetails": "Part-Time opportunity! Sell books and join the Bookstore team."
+  },
+  {
+    "name": "Bob Smith",
+    "company": "Fitness Center",
+    "jobTitle": "Gym Instructor (Evening)",
+    "category": "Part-Time",
+    "postedDate": "2024-03-06",
+    "applicationDeadline": "2024-03-18",
+    "salaryRange": {
+      "min": 20,
+      "max": 25,
+      "unit": "per hour"
+    },
+    "applicants": 12,
+    "viewDetails": "Shape up your schedule! Apply for Gym Instructor (Evening - Part-Time)."
+  },
+  {
+    "name": "Emma White",
+    "company": "StartUp X",
+    "jobTitle": "Software Developer",
+    "category": "Remote",
+    "postedDate": "2024-03-06",
+    "applicationDeadline": "2024-03-18",
+    "salaryRange": {
+      "min": 90000,
+      "max": 120000
+    },
+    "applicants": 5,
+    "viewDetails": "Work from anywhere! See details and apply for Software Developer (Remote)."
+  },
+  {
+    "name": "David Miller",
+    "company": "Educational Platform",
+    "jobTitle": "Online Curriculum Developer",
+    "category": "Remote",
+    "postedDate": "2024-03-02",
+    "applicationDeadline": "2024-03-20",
+    "salaryRange": {
+      "min": 60000,
+      "max": 72000
+    },
+    "applicants": 92,
+    "viewDetails": "Develop online courses remotely! Apply now for Online Curriculum Developer."
+  },
+  {
+    "name": "Maria Lopez",
+    "company": "Translation Services",
+    "jobTitle": "Translator (Spanish)",
+    "category": "Remote",
+    "postedDate": "2024-03-09",
+    "applicationDeadline": "2024-04-05",
+    "salaryRange": {
+      "min": 35,
+      "max": 45,
+      "unit": "per hour"
+    },
+    "applicants": 18,
+    "viewDetails": "Translate from English to Spanish remotely! Apply today."
+  },
+  {
+    "name": "Michael Green",
+    "company": "Green Tech",
+    "jobTitle": "Marketing Manager",
+    "category": "Hybrid",
+    "postedDate": "2024-02-28",
+    "applicationDeadline": "Ongoing",
+    "salaryRange": {
+      "min": 70000,
+      "max": 85000
+    },
+    "applicants": 42,
+    "viewDetails": "Work-life balance! Explore the Hybrid Marketing Manager role."
+  },
+  {
+    "name": "Sophia Brown",
+    "company": "Health & Wellness Co.",
+    "jobTitle": "Customer Service Representative",
+    "category": "Hybrid",
+    "postedDate": "2024-02-15",
+    "applicationDeadline": "2024-04-15",
+    "salaryRange": {
+      "min": 35000,
+      "max": 45000
+    },
+    "applicants": 12,
+    "viewDetails": "Hybrid CSR opportunity! Learn more and apply today."
+  },
+  {
+    "name": "Daniel Turner",
+    "company": "Education Institute",
+    "jobTitle": "Teacher",
+    "category": "Hybrid",
+    "postedDate": "2024-03-07",
+    "applicationDeadline": "2024-03-20",
+    "salaryRange": {
+      "min": 45000,
+      "max": 55000
+    },
+    "applicants": 65,
+    "viewDetails": "Make a difference! See details for Hybrid Teacher position."
+  },
+  {
+    "name": "Olivia Parker",
+    "company": "Marketing Agency",
+    "jobTitle": "Social Media Manager",
+    "category": "Hybrid",
+    "postedDate": "2024-02-23",
+    "applicationDeadline": "2024-03-10",
+    "salaryRange": {
+      "min": 55000,
+      "max": 70000
+    },
+    "applicants": 31,
+    "viewDetails": "Hybrid role! Manage social media for Marketing Agency."
+  },
+  {
+    "name": "Ryan Johnson",
+    "company": "Consulting Firm",
+    "jobTitle": "Business Analyst",
+    "category": "Hybrid",
+    "postedDate": "2024-03-01",
+    "applicationDeadline": "2024-03-29",
+    "salaryRange": {
+      "min": 60000,
+      "max": 80000
+    },
+    "applicants": 48,
+    "viewDetails": "Hybrid Business Analyst opportunity! Apply today."
+  },
+  {
+    "name": "Isabella Martinez",
+    "company": "Global Solutions",
+    "jobTitle": "Content Writer",
+    "category": "Remote",
+    "postedDate": "2024-03-11",
+    "applicationDeadline": "2024-03-25",
+    "salaryRange": {
+      "min": 48000,
+      "max": 58000
+    },
+    "applicants": 32,
+    "viewDetails": "Craft compelling content! View details and apply for Content Writer (Remote)."
+  },
+  {
+    "name": "Ethan Walker",
+    "company": "FinTech Solutions",
+    "jobTitle": "Data Analyst",
+    "category": "Remote",
+    "postedDate": "2024-03-10",
+    "applicationDeadline": "2024-04-10",
+    "salaryRange": {
+      "min": 65000,
+      "max": 80000
+    },
+    "applicants": 17,
+    "viewDetails": "Analyze data remotely! Learn more and apply for Data Analyst (Remote)."
+  },
+  {
+    "name": "Ava Carter",
+    "company": "E-commerce Giant",
+    "jobTitle": "Customer Service Representative",
+    "category": "Remote",
+    "postedDate": "2024-03-12",
+    "applicationDeadline": "2024-03-22",
+    "salaryRange": {
+      "min": 38000,
+      "max": 45000
+    },
+    "applicants": 54,
+    "viewDetails": "Provide excellent customer service remotely! Apply now for CSR (Remote)."
+  },
+  {
+    "name": "Liam Harris",
+    "company": "Tech Startup",
+    "jobTitle": "Software Engineer",
+    "category": "Remote",
+    "postedDate": "2024-03-11",
+    "applicationDeadline": "2024-03-20",
+    "salaryRange": {
+      "min": 100000,
+      "max": 130000
+    },
+    "applicants": 8,
+    "viewDetails": "Work from anywhere! See details and apply for Software Engineer (Remote)."
+  },
+  {
+    "name": "Natalie Turner",
+    "company": "Healthcare Provider",
+    "jobTitle": "Registered Nurse (Telehealth)",
+    "category": "Remote",
+    "postedDate": "2024-03-13",
+    "applicationDeadline": "2024-04-05",
+    "salaryRange": {
+      "min": 75000,
+      "max": 90000
+    },
+    "applicants": 21,
+    "viewDetails": "Make a difference in healthcare remotely! Apply for Telehealth Nurse (Remote)."
+  },
+  {
+    "name": "Jack Anderson",
+    "company": "Acme Inc.",
+    "jobTitle": "Software Engineer",
+    "category": "On-Site",
+    "postedDate": "2024-03-08",
+    "applicationDeadline": "2024-03-22",
+    "salaryRange": {
+      "min": 80000,
+      "max": 100000
+    },
+    "applicants": 25,
+    "viewDetails": "See job description, requirements, and apply now!"
+  },
+  {
+    "name": "Sophie Martin",
+    "company": "Design Inc.",
+    "jobTitle": "Graphic Designer",
+    "category": "On-Site",
+    "postedDate": "2024-02-20",
+    "applicationDeadline": "2024-03-20",
+    "salaryRange": {
+      "min": 50000,
+      "max": 65000
+    },
+    "applicants": 85,
+    "viewDetails": "Learn more about this creative role and apply today!"
+  },
+  {
+    "name": "Luke Taylor",
+    "company": "Law Firm Jones",
+    "jobTitle": "Paralegal",
+    "category": "On-Site",
+    "postedDate": "2024-03-02",
+    "applicationDeadline": "2024-03-25",
+    "salaryRange": {
+      "min": 40000,
+      "max": 50000
+    },
+    "applicants": 17,
+    "viewDetails": "Discover your legal career path and apply!"
+  },
+  {
+    "name": "Mia Jackson",
+    "company": "Manufacturing Inc.",
+    "jobTitle": "Production Engineer",
+    "category": "On-Site",
+    "postedDate": "2024-02-27",
+    "applicationDeadline": "2024-03-15",
+    "salaryRange": {
+      "min": 65000,
+      "max": 80000
+    },
+    "applicants": 38,
+    "viewDetails": "Full details and application for Production Engineer position."
+  },
+  {
+    "name": "Noah White",
+    "company": "Retail Giant",
+    "jobTitle": "Store Manager",
+    "category": "On-Site",
+    "postedDate": "2024-03-04",
+    "applicationDeadline": "2024-03-12",
+    "salaryRange": {
+      "min": 50000,
+      "max": 60000
+    },
+    "applicants": 62,
+    "viewDetails": "Lead your team! See Store Manager details and apply."
+  }
+]
