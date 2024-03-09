@@ -23,6 +23,9 @@ console.log(result)
         <li>
           <NavLink to="/alljobs">All Jobs</NavLink>
         </li>
+        <li>
+          <NavLink to="/story">Story</NavLink>
+        </li>
 
         <>
           {user?.email && (
