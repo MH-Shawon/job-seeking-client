@@ -1,12 +1,13 @@
 import Banner from "../../Layouts/Banner/Banner";
-import JobCategory from "../../Layouts/JobCategory/JobCategory";
+import JobCategory from "../../Layouts/Job/JobCategory/JobCategory";
 
 
-const Home=()=>{
-    return(
+const Home = () => {
+    return (
         <div>
-             <Banner />
-             <JobCategory />
+            <Banner />
+            <JobCategory />
         </div>
-    )}
+    )
+}
 export default Home;
