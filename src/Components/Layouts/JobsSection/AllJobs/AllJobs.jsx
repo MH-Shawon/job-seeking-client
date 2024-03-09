@@ -112,8 +112,8 @@ const AllJobs = () => {
                         </tr>
                     </thead>
                     <tbody>
-                        {filteredJobs.map((job) => (
-                            <JobsTable key={job.jobTitle} job={job}></JobsTable>
+                        {filteredJobs.map((job, index) => (
+                            <JobsTable key={index} job={job}></JobsTable>
                         ))}
                     </tbody>
                 </table>

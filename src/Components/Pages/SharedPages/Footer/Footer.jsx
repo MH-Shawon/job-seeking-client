@@ -1,7 +1,7 @@
 
 const Footer=()=>{
     return(
-        <footer className="footer p-10 bg-[#251D18] text-white">
+        <footer className="footer sm:flex sm:flex-col md:flex-row md:justify-between justify-center p-10 bg-[#251D18] text-white">
             <div>
                 <h3 className="font-merriweather text-4xl font-medium">Job</h3>
                 <p className="uppercase text-[7px]  font-semibold p-0 mt-[-10px] text-white ">
