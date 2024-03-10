@@ -6,15 +6,15 @@ const Job = ({ job }) => {
     applicationDeadline,
     salaryRange,
   } = job;
-  
+
   return (
     <div>
-      <div className=" flex flex-col bg-clip-border rounded-xl bg-gradient-to-tr from-gray-900 to-gray-800 text-white shadow-gray-900/20 shadow-md w-full max-w-[20rem] h-[25rem] p-8 mb-5">
+      <div className=" flex flex-col bg-clip-border rounded-xl bg-gradient-to-r from-gray-800 via-teal-900 to-blue-900 text-white shadow-gray-900/20 shadow-md w-full max-w-[20rem] h-[25rem] p-8 mb-5">
         <div className="relative pb-8 m-0 mb-8 overflow-hidden text-center text-gray-700 bg-transparent border-b rounded-none shadow-none bg-clip-border border-white/10">
           <p className="block font-sans text-sm antialiased font-normal leading-normal text-white uppercase">
             Posted By: {name}
           </p>
-          
+
         </div>
         <div className="p-0">
           <ul className="flex flex-col gap-4">
@@ -81,7 +81,7 @@ const Job = ({ job }) => {
                 Deadline: {applicationDeadline}
               </p>
             </li>
-            
+
             <li className="flex items-center gap-4">
               <span className="p-1 border rounded-full border-white/20 bg-white/20">
                 <svg
