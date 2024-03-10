@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const JobsTable = ({ job }) => {
   const {
     name,
@@ -5,6 +7,7 @@ const JobsTable = ({ job }) => {
     postedDate,
     applicationDeadline,
     salaryRange,
+    category
   } = job;
   return (
     <tr>
@@ -51,9 +54,12 @@ const JobsTable = ({ job }) => {
         )}
       </td>
       <td className="p-4 border-b border-blue-gray-50">
-        <button className="btn btn-outline btn-success" type="button">
-          Details
-        </button>
+        <Link to={`/details/${category}`}>
+          <button className="btn btn-outline btn-success" type="button">
+            Details
+          </button>
+        </Link>
+        
       </td>
     </tr>
   );

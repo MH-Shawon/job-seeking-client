@@ -7,6 +7,8 @@ import Register from "../Pages/Register/Register";
 import NotFound from "../NotFount/NotFound";
 import AllJobs from "../Layouts/JobsSection/AllJobs/AllJobs";
 import Story from "../Layouts/Story/Story";
+import Details from "../Pages/Details/Details";
+import PrivateRoute from "./PrivateRoute/PrivateRoute";
 
 
 const router = createBrowserRouter([
@@ -27,6 +29,13 @@ const router = createBrowserRouter([
         path:'/story',
         element:<Story />,
         
+      },
+      {
+        path:"/details/:category",
+        element:<PrivateRoute>
+          <Details />
+          </PrivateRoute>,
+          loader:()=>fetch(`/allJobs.json`)
       }
       
       
