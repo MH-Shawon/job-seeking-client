@@ -1,5 +1,6 @@
 import Banner from "../../Layouts/Banner/Banner";
 import JobCategory from "../../Layouts/Job/JobCategory/JobCategory";
+import Story from "../../Layouts/Story/Story";
 
 
 const Home = () => {
@@ -7,6 +8,7 @@ const Home = () => {
         <div>
             <Banner />
             <JobCategory />
+            <Story />
         </div>
     )
 }

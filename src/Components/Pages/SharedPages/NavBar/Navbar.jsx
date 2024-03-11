@@ -1,7 +1,8 @@
-import { Link, NavLink } from "react-router-dom";
+import { Link} from "react-router-dom";
 import logo from "../../../../assets/logo.png";
 import { useContext } from "react";
 import { AuthContext } from "../../../Providers/Auth/AuthProvider";
+import NavLinks from "./NavLinks";
 
 const Navbar = () => {
   const { user, logOut } = useContext(AuthContext);
@@ -14,37 +15,7 @@ console.log(result)
       console.log(error)
     });
   };
-  const navlinks = (
-    <>
-      <div className="flex font-poppins text-lg tracking-[-0.342px]">
-        <li>
-          <NavLink to="/">Home</NavLink>
-        </li>
-        <li>
-          <NavLink to="/alljobs">All Jobs</NavLink>
-        </li>
-        <li>
-          <NavLink to="/story">Story</NavLink>
-        </li>
-
-        <>
-          {user?.email && (
-            <>
-              <li>
-                <NavLink to="/applied">applied Jobs</NavLink>
-              </li>
-              <li>
-                <NavLink to="/addjobs">Add A Job</NavLink>
-              </li>
-              <li>
-                <NavLink to="/myjobs">My Jobs</NavLink>
-              </li>
-            </>
-          )}
-        </>
-      </div>
-    </>
-  );
+  
   return (
     <div className="navbar bg-[#e1e3e9] h-10 lg:px-24 sticky top-0 z-10 bg-opacity-50 backdrop-blur-4xl backdrop-saturate-200">
       <div className="navbar-start">
@@ -69,7 +40,7 @@ console.log(result)
             tabIndex={0}
             className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
           >
-            {navlinks}
+            <NavLinks />
           </ul>
         </div>
 
@@ -80,7 +51,7 @@ console.log(result)
         </Link>
       </div>
       <div className="navbar-center hidden lg:flex">
-        <ul className="menu menu-horizontal px-1">{navlinks}</ul>
+        <ul className="menu menu-horizontal px-1"><NavLinks /></ul>
       </div>
       <div className="navbar-end">
         <div>

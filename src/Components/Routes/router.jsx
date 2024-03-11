@@ -9,6 +9,7 @@ import AllJobs from "../Layouts/JobsSection/AllJobs/AllJobs";
 import Story from "../Layouts/Story/Story";
 import Details from "../Pages/Details/Details";
 import PrivateRoute from "./PrivateRoute/PrivateRoute";
+import Blogs from "../Pages/Blogs/Blogs";
 
 
 const router = createBrowserRouter([
@@ -28,6 +29,11 @@ const router = createBrowserRouter([
       {
         path: '/story',
         element: <Story />,
+
+      },
+      {
+        path: '/blogs',
+        element: <Blogs />,
 
       },
       {
