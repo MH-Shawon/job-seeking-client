@@ -41,7 +41,7 @@ const router = createBrowserRouter([
         element: <PrivateRoute>
           <Details />
         </PrivateRoute>,
-        loader: ({params}) => fetch(`http://localhost:5000/jobs/${params.id}`)
+        loader: ({ params }) => fetch(`http://localhost:5000/api/v1/jobs/${params.id}`)
       }
 
 

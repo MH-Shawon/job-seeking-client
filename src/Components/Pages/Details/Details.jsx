@@ -1,12 +1,16 @@
 import { useContext } from "react";
 import { useLoaderData } from "react-router-dom";
 import { AuthContext } from "../../Providers/Auth/AuthProvider";
-// import "./DetailsCard.css";
+import Modal from "../../Modal/Modal";
+
+
 
 const Details = () => {
   const job = useLoaderData();
   const {user} = useContext(AuthContext);
-  console.log(user.displayName)
+  
+
+  
   const {
     jobTitle,
     postedDate,
@@ -15,6 +19,7 @@ const Details = () => {
     applicants,
     viewDetails,
   } = job;
+
 
   // Additional sections from outside the job data
   const companyBenefits = [
@@ -80,6 +85,13 @@ const Details = () => {
             {companyDescription}
           </p>
         </div>
+        {/* <ApplyBtn /> */}
+        <div className="apply-now-button mt-4 text-center">
+          
+          <Modal user={user}
+            deadline={applicationDeadline} />
+        </div>
+        
       </div>
     </div>
   );
