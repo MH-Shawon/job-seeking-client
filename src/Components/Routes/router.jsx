@@ -15,37 +15,37 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <MainLayouts />,
-    errorElement:<NotFound />,
+    errorElement: <NotFound />,
     children: [
       {
         path: "/",
         element: <Home />,
       },
       {
-        path:'/alljobs',
-        element:<AllJobs />,
+        path: '/alljobs',
+        element: <AllJobs />,
       },
       {
-        path:'/story',
-        element:<Story />,
-        
+        path: '/story',
+        element: <Story />,
+
       },
       {
-        path:"/details/:category",
-        element:<PrivateRoute>
+        path: "/details/:id",
+        element: <PrivateRoute>
           <Details />
-          </PrivateRoute>,
-          loader:()=>fetch(`/allJobs.json`)
+        </PrivateRoute>,
+        loader: ({params}) => fetch(`http://localhost:5000/jobs/${params.id}`)
       }
-      
-      
+
+
     ],
   },
   {
     path: "/login",
     element: <Login />,
   },
-   {
+  {
     path: '/register',
     element: <Register />
   },

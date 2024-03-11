@@ -7,6 +7,7 @@ const Job = ({ job }) => {
   const { user } = useContext(AuthContext);
  
   const {
+    _id,
     name,
     jobTitle,
     postedDate,
@@ -122,7 +123,7 @@ const Job = ({ job }) => {
           </ul>
         </div>
         <div className="flex items-center justify-center mt-8">
-          <Link to={`/details/${category}`}>
+          <Link to={`/details/${_id}`}>
             <button
               onClick={handleDetailsClick}
               className="font-bold text-center uppercase text-black transition-all disabled:opacity-50 disabled:pointer-events-none text-sm py-3.5 px-7 rounded-lg bg-white text-blue-gray-900 hover:bg-gray-200 focus:outline-none focus:ring focus:border-transparent active:bg-gray-300 transform hover:scale-105 focus:scale-105 active:scale-100"

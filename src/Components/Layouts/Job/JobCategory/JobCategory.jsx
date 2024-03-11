@@ -10,7 +10,7 @@ const JobCategory = () => {
     const [selectedCategory, setSelectedCategory] = useState(null);
 
     useEffect(() => {
-        fetch("allJobs.json")
+        fetch("http://localhost:5000/jobs")
             .then((res) => res.json())
             .then((data) => setJobs(data));
     }, []);

@@ -7,7 +7,7 @@ const JobsTable = ({ job }) => {
     postedDate,
     applicationDeadline,
     salaryRange,
-    category
+    _id
   } = job;
   return (
     <tr>
@@ -54,7 +54,7 @@ const JobsTable = ({ job }) => {
         )}
       </td>
       <td className="p-4 border-b border-blue-gray-50">
-        <Link to={`/details/${category}`}>
+        <Link to={`/details/${_id}`}>
           <button className="btn btn-outline btn-success" type="button">
             Details
           </button>
