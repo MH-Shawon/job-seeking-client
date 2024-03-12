@@ -1,5 +1,6 @@
 import { useState } from "react";
 import story from '../../../assets/story/story.svg'
+import { Helmet } from "react-helmet-async";
 const Story=()=>{
     const initialText = (
         "But I must explain to you how all this mistaken idea of denouncing " +
@@ -17,6 +18,9 @@ const Story=()=>{
     const truncatedText = showFullText ? initialText : `${initialText.split(' ').slice(0, 50).join(' ')}...`;
     return (
         <div className=" text-white bg-[#251D18] shadow-2xl mb-2">
+            <Helmet>
+                <title>Job Seeking | Story </title>
+            </Helmet>
             <div className="hero-content w-full  mx-auto  flex-col lg:flex-row-reverse ">
                 <div className="w-1/2 md:mr-16">
                     <img

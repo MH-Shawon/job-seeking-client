@@ -10,6 +10,7 @@ import Story from "../Layouts/Story/Story";
 import Details from "../Pages/Details/Details";
 import PrivateRoute from "./PrivateRoute/PrivateRoute";
 import Blogs from "../Pages/Blogs/Blogs";
+import AppliedJobs from "../Pages/AppliedJobs/AppliedJobs";
 
 
 const router = createBrowserRouter([
@@ -42,6 +43,12 @@ const router = createBrowserRouter([
           <Details />
         </PrivateRoute>,
         loader: ({ params }) => fetch(`http://localhost:5000/api/v1/jobs/${params.id}`)
+      },
+      {
+        path:'appliedJobs',
+        element:<PrivateRoute>
+          <AppliedJobs />
+          </PrivateRoute>
       }
 
 

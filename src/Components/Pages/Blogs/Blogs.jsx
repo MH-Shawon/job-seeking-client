@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Helmet } from "react-helmet-async";
 
 const Blogs = () => {
   const [collapseState, setCollapseState] = useState({
@@ -17,6 +18,9 @@ const Blogs = () => {
   };
   return (
       <div className="bg-gradient-to-b from-purple-800 to-indigo-900 text-white min-h-screen">
+          <Helmet>
+              <title>Job Seeking | Blogs</title>
+          </Helmet>
           <div className="container mx-auto px-4 py-8 sm:px-6 md:px-8 lg:px-12 xl:px-16">
               <h1 className="text-4xl font-extrabold mb-6 text-yellow-300">
                   🚀 Read And Explore... 🌐

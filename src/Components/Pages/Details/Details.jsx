@@ -7,12 +7,14 @@ import Modal from "../../Modal/Modal";
 
 const Details = () => {
   const job = useLoaderData();
+  console.log(job)
   const {user} = useContext(AuthContext);
   
 
   
   const {
     jobTitle,
+    category,
     postedDate,
     applicationDeadline,
     salaryRange,
@@ -89,7 +91,9 @@ const Details = () => {
         <div className="apply-now-button mt-4 text-center">
           
           <Modal user={user}
-            deadline={applicationDeadline} />
+            deadline={applicationDeadline}
+            jobTitle={jobTitle}
+            category={category} />
         </div>
         
       </div>
