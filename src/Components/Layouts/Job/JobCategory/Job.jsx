@@ -27,10 +27,14 @@ const Job = ({ job }) => {
 
   return (
     <div>
-      <div className="flex flex-col bg-gradient-to-r from-gray-800 via-teal-900 to-blue-900 text-white rounded-xl shadow-md max-w-[20rem] h-[25rem] p-8 mb-5 overflow-hidden">
+      <div className="flex flex-col bg-gradient-to-r from-gray-800 via-teal-900 to-blue-900 text-white rounded-xl shadow-md max-w-[20rem] h-[28rem] p-8 mb-5 overflow-hidden">
         <div className="relative pb-8 mb-8 text-center text-gray-700 bg-transparent border-b border-white/10">
           <p className="block font-sans text-sm antialiased font-normal leading-normal text-white uppercase">
             Posted By: {name}
+            <br />
+          </p>
+          <p className="block font-sans text-sm antialiased font-normal leading-normal text-white mt-2">
+             Category: {category}
           </p>
         </div>
         <div className="flex-1">

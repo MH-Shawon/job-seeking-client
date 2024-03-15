@@ -28,6 +28,7 @@ const UpdatedJob = () => {
     const posting = form.posting.value;
     const deadline = form.deadline.value;
 
+
     const update = {
       picture,
       title,
@@ -49,7 +50,6 @@ const UpdatedJob = () => {
     })
       .then((res) => res.json())
       .then((data) => {
-        console.log(data)
         if (data.modifiedCount > 0) {
           Swal.fire({
             title: "Success!",

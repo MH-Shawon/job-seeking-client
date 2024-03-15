@@ -28,7 +28,6 @@ const Login = () => {
     login(email, password)
       .then((result) => {
         const loggedInUser = result.user;
-console.log(loggedInUser)
 
         navigate(location?.state ? location.state : "/");
         
@@ -44,7 +43,7 @@ console.log(loggedInUser)
     signInWithPopup(auth, provider)
       .then((res) => {
         const user = res.user;
-        console.log(user);
+        
         navigate(location?.state ? location.state : "/");
       })
       .catch((err) => {

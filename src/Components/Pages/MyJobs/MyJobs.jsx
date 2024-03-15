@@ -1,17 +1,34 @@
-import { useState } from "react";
+import { useContext, useEffect, useState } from "react";
 
 import JobCard from "./JobCard";
 
 import Swal from "sweetalert2";
-import { useLoaderData } from "react-router-dom";
+
+import { AuthContext } from "../../Providers/Auth/AuthProvider";
 
 const MyJobs = () => {
-  const jobs = useLoaderData();
+  const { user } = useContext(AuthContext);
+  const [remainingJobs, setRemainingJobs] = useState([]);
 
-  const [remainingJobs, setRemainingJObs] = useState(jobs);
+  useEffect(() => {
+    loadJobs();
+  }, []);
+  const loadJobs = () => {
+    // Construct the URL with query parameters
+    const url = `http://localhost:5000/api/v1/addJobs?email=${encodeURIComponent(user.email)}`;
+
+    fetch(url)
+      .then((res) => res.json())
+      .then((data) => {
+        setRemainingJobs(data);
+      })
+      .catch((error) => {
+        console.error("Error loading jobs:", error);
+      });
+  };
+  //
 
   const handleDelete = (_id) => {
-     
     Swal.fire({
       title: "Are you sure?",
       text: "You won't be able to delete this!",
@@ -21,36 +38,41 @@ const MyJobs = () => {
       cancelButtonColor: "#d33",
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
+      if (result.isConfirmed) {
         fetch(`http://localhost:5000/api/v1/addJobs/${_id}`, {
-        method: "DELETE",
-      })
-        .then((res) => res.json())
-        .then((data) => {
-
-          if (data.deletedCount > 0) {
-            if (result.isConfirmed) {
+          method: "DELETE",
+        })
+          .then((res) => res.json())
+          .then((data) => {
+            if (data.deletedCount > 0) {
               Swal.fire({
                 title: "Deleted!",
                 text: "Your file has been deleted.",
                 icon: "success",
               });
+              // Remove the deleted job from the state
+              setRemainingJobs((prevJobs) =>
+                prevJobs.filter((job) => job._id !== _id)
+              );
             }
-            const remaining = remainingJobs.filter(
-              (exist) => exist._id !== _id
-            );
-            setRemainingJObs(remaining);
-          }
-        });
+          })
+          .catch((error) => {
+            console.error("Error deleting job:", error);
+          });
+      }
     });
   };
 
   return (
     <div>
-      <p className="text-center"> MyJobs:{remainingJobs.length}</p>
+      <p className="text-center">
+        {`${user.displayName}'s`} Jobs: {remainingJobs.length}
+      </p>
       {remainingJobs.map((job) => (
         <JobCard key={job._id} job={job} handleDelete={handleDelete}></JobCard>
       ))}
     </div>
   );
 };
+
 export default MyJobs;
