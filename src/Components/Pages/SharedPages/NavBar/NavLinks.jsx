@@ -33,7 +33,7 @@ const NavLinks = () => {
                 
               </li>
               <li>
-                <NavLink to="/addJobs">Add A Job</NavLink>
+                <NavLink to="/addJob">Add A Job</NavLink>
                 
               </li>
               <li>

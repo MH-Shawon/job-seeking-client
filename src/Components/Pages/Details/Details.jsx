@@ -7,7 +7,6 @@ import Modal from "../../Modal/Modal";
 
 const Details = () => {
   const job = useLoaderData();
-  console.log(job)
   const {user} = useContext(AuthContext);
   
 
