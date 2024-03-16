@@ -30,7 +30,7 @@ const Modal = ({ user, deadline, jobTitle, category }) => {
       jobTitle,
       category
     };
-    console.log(job);
+    
 
     axios.post("http://localhost:5000/api/v1/appliedJob", job).then((data) => {
       console.log(data.data);

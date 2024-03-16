@@ -2,6 +2,7 @@ import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../Providers/Auth/AuthProvider";
 import FilterCategory from "./FilterCategory/FilterCategory";
 import { Helmet } from "react-helmet-async";
+import axios from "axios";
 
 const AppliedJobs = () => {
   const [appliedJobs, setAppliedJobs] = useState([]);
@@ -11,7 +12,13 @@ const AppliedJobs = () => {
   const URL = `http://localhost:5000/api/v1/appliedJobs?email=${user.email}`;
 
   useEffect(() => {
-    fetch(URL)
+    // axios.get(URL, {withCredentials:true})
+    //   .then((data) => {
+    //     console.log(data)
+    //       setAppliedJobs(data.data)})
+    fetch(URL, {
+      credentials: 'include'
+    })
       .then((res) => res.json())
       .then((data) => {
         setAppliedJobs(data);

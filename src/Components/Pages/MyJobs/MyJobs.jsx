@@ -6,19 +6,25 @@ import Swal from "sweetalert2";
 
 import { AuthContext } from "../../Providers/Auth/AuthProvider";
 import { Helmet } from "react-helmet-async";
+import axios from "axios";
 
 const MyJobs = () => {
   const { user } = useContext(AuthContext);
   const [remainingJobs, setRemainingJobs] = useState([]);
-console.log(remainingJobs)
   useEffect(() => {
     loadJobs();
   }, []);
   const loadJobs = () => {
     // Construct the URL with query parameters
     const url = `http://localhost:5000/api/v1/addJobs?email=${encodeURIComponent(user.email)}`;
+    // axios.get(url, {withCredentials:true})
+    // .then(data=>{
+    //   setRemainingJobs(data.data);
+    // })
 
-    fetch(url)
+    fetch(url, {
+      credentials: 'include' 
+    })
       .then((res) => res.json())
       .then((data) => {
         setRemainingJobs(data);

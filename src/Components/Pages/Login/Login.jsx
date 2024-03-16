@@ -25,18 +25,18 @@ const Login = () => {
     const email = form.email.value;
 
     const password = form.password.value;
-    
+
     login(email, password)
       .then((result) => {
         const loggedInUser = result.user;
         const user = { email };
-        axios.post('http://localhost:5000/jwt', user, {withCredentials:true})
-        .then(res=>{
-          if (res.data.success) {
-            navigate(location?.state ? location?.state : '/')
-          }
-        })
-        
+        axios
+          .post("http://localhost:5000/jwt", user, { withCredentials: true })
+          .then((res) => {
+            if (res.data.success) {
+              navigate(location?.state ? location?.state : "/");
+            }
+          });
       })
       .catch((error) => {
         toast.error("Incorrect Email or password");
