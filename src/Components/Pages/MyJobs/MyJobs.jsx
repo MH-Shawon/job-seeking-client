@@ -5,11 +5,12 @@ import JobCard from "./JobCard";
 import Swal from "sweetalert2";
 
 import { AuthContext } from "../../Providers/Auth/AuthProvider";
+import { Helmet } from "react-helmet-async";
 
 const MyJobs = () => {
   const { user } = useContext(AuthContext);
   const [remainingJobs, setRemainingJobs] = useState([]);
-
+console.log(remainingJobs)
   useEffect(() => {
     loadJobs();
   }, []);
@@ -65,6 +66,9 @@ const MyJobs = () => {
 
   return (
     <div>
+      <Helmet>
+        <title>Job Seeking | My Jobs</title>
+      </Helmet>
       <p className="text-center">
         {`${user.displayName}'s`} Jobs: {remainingJobs.length}
       </p>

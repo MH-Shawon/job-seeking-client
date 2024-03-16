@@ -4,7 +4,7 @@ import { MdOutlineMailOutline } from "react-icons/md";
 import { RiLock2Fill } from "react-icons/ri";
 import { FaPencilAlt } from "react-icons/fa";
 import { FaPhoneFlip } from "react-icons/fa6";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import "./Register.css";
 import logo from "../../../assets/JobZeelogo.png";
 import register from "../../../assets/register.png";
@@ -17,7 +17,8 @@ const Register = () => {
     const [role, setRole] = useState("");
     const { createUser } = useContext(AuthContext);
     const [error, setRegisterError] = useState(false);
-    
+    const location = useLocation();
+    const navigate = useNavigate();
 
     const handleRegister = (e) => {
         e.preventDefault();
@@ -38,14 +39,22 @@ const Register = () => {
         createUser(email, password)
             .then((result) => {
                 const user = result.user;
-                console.log(user.displayName);
                 toast.success("User Created Successfully!");
-                return updateProfile(user, { displayName: name });
-                // Update profile with display name
-                
-                
+                if (user) {
+                    // Set the display name here
+                    updateProfile(user, {
+                        displayName: name,
+
+                        })
+                        .then(() => {
+                            console.log(user); // Should log the updated displayName
+                            navigate(location?.state ? location?.state : '/');
+                        })
+                        .catch((error) => {
+                            console.error(error);
+                        });
+                }
             })
-            
             .catch((error) => {
                 console.error(error);
             });

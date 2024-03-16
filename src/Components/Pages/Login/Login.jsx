@@ -9,6 +9,7 @@ import { GoogleAuthProvider, signInWithPopup } from "firebase/auth";
 import { AuthContext } from "../../Providers/Auth/AuthProvider";
 import toast from "react-hot-toast";
 import auth from "../../../Firebase/firebase.init";
+import axios from "axios";
 
 const Login = () => {
   const [role, setRole] = useState("");
@@ -17,38 +18,42 @@ const Login = () => {
   const location = useLocation();
   const navigate = useNavigate();
 
-  const handleLogin =  (e) => {
+  const handleLogin = (e) => {
     e.preventDefault();
     const form = e.target;
 
     const email = form.email.value;
 
     const password = form.password.value;
-    console.log(email, password, role);
+    
     login(email, password)
       .then((result) => {
         const loggedInUser = result.user;
-
-        navigate(location?.state ? location.state : "/");
+        const user = { email };
+        axios.post('http://localhost:5000/jwt', user, {withCredentials:true})
+        .then(res=>{
+          if (res.data.success) {
+            navigate(location?.state ? location?.state : '/')
+          }
+        })
         
       })
-      .catch(error => {
+      .catch((error) => {
         toast.error("Incorrect Email or password");
       });
-
-
   };
 
   const handleGoogleLogin = () => {
     signInWithPopup(auth, provider)
       .then((res) => {
         const user = res.user;
-        
+
         navigate(location?.state ? location.state : "/");
       })
       .catch((err) => {
         console.log(err.message);
-      });}
+      });
+  };
   return (
     <div>
       <section className="authPage ">
@@ -88,7 +93,7 @@ const Login = () => {
                   placeholder="Your Password"
                   name="password"
                 />
-              <RiLock2Fill />
+                <RiLock2Fill />
               </div>
             </div>
             <button type="submit">Login</button>
