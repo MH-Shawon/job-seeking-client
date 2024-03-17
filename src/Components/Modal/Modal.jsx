@@ -1,10 +1,31 @@
 import axios from "axios";
 import { useState } from "react";
 import toast from "react-hot-toast";
-
+import emailjs from '@emailjs/browser';
 const Modal = ({ user, deadline, jobTitle, category }) => {
   const [resumeLink, setResumeLink] = useState("");
   const [isModalOpen, setIsModalOpen] = useState(true);
+
+
+  const sendEmail = () => {
+    const templateParams = {
+      to_email: user.email,
+      from_name: user.displayName,
+      job_title: jobTitle,
+      category: category,
+    };
+
+    emailjs.send('service_cf36ykd', 'template_k69cfsa', templateParams, 'aOWLrqphdnI4QJ3kr')
+      .then((response) => {
+        console.log('Email sent successfully:', response);
+      })
+      .catch((error) => {
+        console.error('Error sending email:', error);
+      });
+  };
+
+
+
   const handleApply = (e) => {
     e.preventDefault();
     const currentTimestamp = Date.now();
@@ -30,6 +51,9 @@ const Modal = ({ user, deadline, jobTitle, category }) => {
       jobTitle,
       category
     };
+
+    // send email 
+    sendEmail();
     
 
     axios.post("http://localhost:5000/api/v1/appliedJob", job).then((data) => {

@@ -12,17 +12,21 @@ const AppliedJobs = () => {
   const URL = `http://localhost:5000/api/v1/appliedJobs?email=${user.email}`;
 
   useEffect(() => {
-    // axios.get(URL, {withCredentials:true})
-    //   .then((data) => {
-    //     console.log(data)
-    //       setAppliedJobs(data.data)})
-    fetch(URL, {
-      credentials: 'include'
-    })
-      .then((res) => res.json())
+    axios.get(URL, {withCredentials:true})
       .then((data) => {
-        setAppliedJobs(data);
-      });
+        console.log(data)
+          setAppliedJobs(data.data)})
+
+    /* when using axios use withCredentials
+    *when use fetch use credentials */
+   
+    // fetch(URL, {
+    //   credentials: 'include'
+    // })
+    //   .then((res) => res.json())
+    //   .then((data) => {
+    //     setAppliedJobs(data);
+    //   });
   }, [URL]);
 
   const handleChange = (e) => {

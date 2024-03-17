@@ -48,30 +48,30 @@ const router = createBrowserRouter([
         loader: ({ params }) => fetch(`http://localhost:5000/api/v1/jobs/${params.id}`)
       },
       {
-        path:'appliedJobs',
-        element:<PrivateRoute>
+        path: 'appliedJobs',
+        element: <PrivateRoute>
           <AppliedJobs />
-          </PrivateRoute>
+        </PrivateRoute>
       },
       {
-        path:'addJob',
-        element:<PrivateRoute>
+        path: 'addJob',
+        element: <PrivateRoute>
           <AddAJob />
-          </PrivateRoute>
+        </PrivateRoute>
       },
       {
-        path:'myjobs',
-        element:<PrivateRoute>
+        path: 'myjobs',
+        element: <PrivateRoute>
           <MyJobs />
-          </PrivateRoute>,
-        loader: () => fetch('http://localhost:5000/api/v1/addJobs')
+        </PrivateRoute>,
+        loader: () => fetch('http://localhost:5000/api/v1/jobs')
       },
       {
-        path:'/updateJob/:id',
-        element:<PrivateRoute>
+        path: '/updateJob/:id',
+        element: <PrivateRoute>
           <UpdatedJob />
-          </PrivateRoute>,
-        loader: ({ params }) => fetch(`http://localhost:5000/api/v1/addJobs/${params.id}`)
+        </PrivateRoute>,
+        loader: ({ params }) => fetch(`http://localhost:5000/api/v1/jobs/${params.id}`)
       }
 
 

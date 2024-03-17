@@ -5,11 +5,15 @@ import { Helmet } from "react-helmet-async";
 
 const AllJobs = () => {
     const [allJob, setAllJob] = useState([]);
-
+    console.log(allJob)
     useEffect(() => {
         fetch("http://localhost:5000/api/v1/jobs")
             .then((res) => res.json())
-            .then((data) => setAllJob(data));
+            .then((data) =>{
+                
+                setAllJob(data)
+            }
+             );
     }, []);
     const [searchTerm, setSearchTerm] = useState("");
 

@@ -7,8 +7,10 @@ import { Helmet } from "react-helmet-async";
 
 const AddAJob = () => {
   const { user } = useContext(AuthContext);
+  const defaultUserName = user?.displayName || "";
   const defaultUserEmail = user?.email || "";
   const [formData, setFormData] = useState({
+    name: defaultUserName,
     pictureUrl: "",
     jobTitle: "",
     loggedInUserEmail: defaultUserEmail,
@@ -32,16 +34,17 @@ const AddAJob = () => {
     e.preventDefault();
     try {
       const response = await axios.post(
-        "http://localhost:5000/api/v1/addjob",
+        "http://localhost:5000/api/v1/addJobs",
         formData
       );
       console.log("Job added successfully!", response.data);
       if (response.data.acknowledged) {
         toast.success("Job added successfully!");
         setFormData({
+          name: "",
           pictureUrl: "",
           jobTitle: "",
-          loggedInUserEmail: "",
+          loggedInUserName: "",
           jobCategory: "",
           salaryRange: "",
           jobDescription: "",
@@ -64,6 +67,26 @@ const AddAJob = () => {
       <form onSubmit={handleSubmit} className="space-y-4">
         <div className="flex flex-wrap -mx-2">
           <div className="w-full md:w-1/2 px-2 mb-4">
+            <label className="block mb-1">Name:</label>
+            <input
+              type="text"
+              name="name"
+              defaultValue={formData.name}
+              onChange={handleChange}
+              className="border rounded px-3 py-2 w-full"
+            />
+          </div>
+          <div className="w-full md:w-1/2 px-2 mb-4">
+            <label className="block mb-1">Logged In User Email:</label>
+            <input
+              type="text"
+              name="loggedInUserEmail"
+              defaultValue={formData.loggedInUserEmail}
+              onChange={handleChange}
+              className="border rounded px-3 py-2 w-full"
+            />
+          </div>
+          <div className="w-full md:w-1/2 px-2 mb-4">
             <label className="block mb-1">Job Banner URL:</label>
             <input
               type="text"
@@ -83,16 +106,7 @@ const AddAJob = () => {
               className="border rounded px-3 py-2 w-full"
             />
           </div>
-          <div className="w-full md:w-1/2 px-2 mb-4">
-            <label className="block mb-1">Logged In User Email:</label>
-            <input
-              type="text"
-              name="loggedInUserEmail"
-              defaultValue={formData.loggedInUserEmail}
-              onChange={handleChange}
-              className="border rounded px-3 py-2 w-full"
-            />
-          </div>
+
           <div className="w-full md:w-1/2 px-2 mb-4">
             <label className="block mb-1">Job Category:</label>
             <select
@@ -147,17 +161,18 @@ const AddAJob = () => {
               className="border rounded px-3 py-2 w-full"
             />
           </div>
+          <div className="w-full md:w-1/2 px-2 mb-4">
+            <label className="block mb-1">Application Deadline:</label>
+            <input
+              type="number"
+              name="jobApplicantsNumber"
+              value={formData.jobApplicantsNumber}
+              onChange={handleChange}
+              className="border rounded px-3 py-2 w-full"
+            />
+          </div>
         </div>
-        <div>
-          <label className="block mb-1">Job Applicants Number:</label>
-          <input
-            type="number"
-            name="jobApplicantsNumber"
-            value={formData.jobApplicantsNumber}
-            onChange={handleChange}
-            className="border rounded px-3 py-2 w-full"
-          />
-        </div>
+
         <div className="text-center">
           <button
             type="submit"

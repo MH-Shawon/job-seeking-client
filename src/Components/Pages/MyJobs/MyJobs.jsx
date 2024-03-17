@@ -16,24 +16,27 @@ const MyJobs = () => {
   }, []);
   const loadJobs = () => {
     // Construct the URL with query parameters
-    const url = `http://localhost:5000/api/v1/addJobs?email=${encodeURIComponent(user.email)}`;
-    // axios.get(url, {withCredentials:true})
-    // .then(data=>{
-    //   setRemainingJobs(data.data);
-    // })
+    const url = `http://localhost:5000/api/v1/addJobs?email=${user.email}`;
 
-    fetch(url, {
-      credentials: 'include' 
-    })
-      .then((res) => res.json())
+    axios.get(url, { withCredentials: true })
       .then((data) => {
-        setRemainingJobs(data);
+        console.log(data.data)
+        setRemainingJobs(data.data);
       })
-      .catch((error) => {
-        console.error("Error loading jobs:", error);
-      });
+
+      /* when using axios use withCredentials
+       *when use fetch use credentials */
+
+      // fetch(url, {
+      //   credentials: 'include'
+      // })
+      //   .then((res) => res.json())
+      //   .then((data) => {
+      //     setRemainingJobs(data);
+      //   })
+      
   };
-  //
+  
 
   const handleDelete = (_id) => {
     Swal.fire({
