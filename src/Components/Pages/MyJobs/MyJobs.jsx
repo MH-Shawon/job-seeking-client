@@ -16,7 +16,7 @@ const MyJobs = () => {
   }, []);
   const loadJobs = () => {
     // Construct the URL with query parameters
-    const url = `http://localhost:5000/api/v1/addJobs?email=${user.email}`;
+    const url = `https://job-seeking-server-theta.vercel.app/api/v1/addJobs?email=${user.email}`;
 
     axios.get(url, { withCredentials: true })
       .then((data) => {
@@ -24,19 +24,19 @@ const MyJobs = () => {
         setRemainingJobs(data.data);
       })
 
-      /* when using axios use withCredentials
-       *when use fetch use credentials */
+    /* when using axios use withCredentials
+     *when use fetch use credentials */
 
-      // fetch(url, {
-      //   credentials: 'include'
-      // })
-      //   .then((res) => res.json())
-      //   .then((data) => {
-      //     setRemainingJobs(data);
-      //   })
-      
+    // fetch(url, {
+    //   credentials: 'include'
+    // })
+    //   .then((res) => res.json())
+    //   .then((data) => {
+    //     setRemainingJobs(data);
+    //   })
+
   };
-  
+
 
   const handleDelete = (_id) => {
     Swal.fire({
@@ -49,7 +49,7 @@ const MyJobs = () => {
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`http://localhost:5000/api/v1/addJobs/${_id}`, {
+        fetch(`https://job-seeking-server-theta.vercel.app/api/v1/addJobs/${_id}`, {
           method: "DELETE",
         })
           .then((res) => res.json())

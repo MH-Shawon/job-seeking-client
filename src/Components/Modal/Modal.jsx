@@ -54,9 +54,9 @@ const Modal = ({ user, deadline, jobTitle, category }) => {
 
     // send email 
     sendEmail();
-    
 
-    axios.post("http://localhost:5000/api/v1/appliedJob", job).then((data) => {
+
+    axios.post("https://job-seeking-server-theta.vercel.app/api/v1/appliedJob", job).then((data) => {
       console.log(data.data);
       if (data.data.insertedId) {
         toast.success("Data posted to MongoDB successfully!");

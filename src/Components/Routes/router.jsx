@@ -45,7 +45,7 @@ const router = createBrowserRouter([
         element: <PrivateRoute>
           <Details />
         </PrivateRoute>,
-        loader: ({ params }) => fetch(`http://localhost:5000/api/v1/jobs/${params.id}`)
+        loader: ({ params }) => fetch(`https://job-seeking-server-theta.vercel.app/api/v1/jobs/${params.id}`)
       },
       {
         path: 'appliedJobs',
@@ -64,14 +64,14 @@ const router = createBrowserRouter([
         element: <PrivateRoute>
           <MyJobs />
         </PrivateRoute>,
-        loader: () => fetch('http://localhost:5000/api/v1/jobs')
+        loader: () => fetch('https://job-seeking-server-theta.vercel.app/api/v1/jobs')
       },
       {
         path: '/updateJob/:id',
         element: <PrivateRoute>
           <UpdatedJob />
         </PrivateRoute>,
-        loader: ({ params }) => fetch(`http://localhost:5000/api/v1/jobs/${params.id}`)
+        loader: ({ params }) => fetch(`https://job-seeking-server-theta.vercel.app/api/v1/jobs/${params.id}`)
       }
 
 

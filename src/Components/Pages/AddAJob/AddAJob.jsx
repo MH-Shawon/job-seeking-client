@@ -34,7 +34,7 @@ const AddAJob = () => {
     e.preventDefault();
     try {
       const response = await axios.post(
-        "http://localhost:5000/api/v1/addJobs",
+        "https://job-seeking-server-theta.vercel.app/api/v1/addJobs",
         formData
       );
       console.log("Job added successfully!", response.data);

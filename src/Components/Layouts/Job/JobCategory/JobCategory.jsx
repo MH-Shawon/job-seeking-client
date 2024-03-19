@@ -10,7 +10,7 @@ const JobCategory = () => {
     const [selectedCategory, setSelectedCategory] = useState(null);
 
     useEffect(() => {
-        fetch("http://localhost:5000/api/v1/jobs")
+        fetch("https://job-seeking-server-theta.vercel.app/api/v1/jobs")
             .then((res) => res.json())
             .then((data) => setJobs(data));
     }, []);

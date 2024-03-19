@@ -41,7 +41,7 @@ const UpdatedJob = () => {
     };
 
     // send data to the server
-    fetch(`http://localhost:5000/api/v1/updateJobs/${_id}`, {
+    fetch(`https://job-seeking-server-theta.vercel.app/api/v1/updateJobs/${_id}`, {
       method: "PUT",
       headers: {
         "content-type": "application/json",

@@ -9,17 +9,18 @@ const AppliedJobs = () => {
   const [selectedCategory, setSelectedCategory] = useState('All');
 
   const { user } = useContext(AuthContext);
-  const URL = `http://localhost:5000/api/v1/appliedJobs?email=${user.email}`;
+  const URL = `https://job-seeking-server-theta.vercel.app/api/v1/appliedJobs?email=${user.email}`;
 
   useEffect(() => {
-    axios.get(URL, {withCredentials:true})
+    axios.get(URL, { withCredentials: true })
       .then((data) => {
         console.log(data)
-          setAppliedJobs(data.data)})
+        setAppliedJobs(data.data)
+      })
 
     /* when using axios use withCredentials
     *when use fetch use credentials */
-   
+
     // fetch(URL, {
     //   credentials: 'include'
     // })
